@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "g+GFsNcX74J6IspA9J6lGCpfdJGyLz5XEnPCAk1tCZa0dD3x2QRJ+nUsaH52YPT1UnwseAuIqES3purCh7BipA==",
+  "dgSpecHash": "tE+P+KjWkWuXOY1OZ6kXcQ5+4eqKBswYlYrNQGSZt9fH/MEayKZE2SYKnu0i8EgHsX8pvbmj0ueLCuUjTO3NGQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Matyi\\Desktop\\SWH3\\SWH\\SWH.MVC\\SWH.MVC.csproj",
   "expectedPackageFiles": [
@@ -171,7 +171,8 @@
     "C:\\Users\\Matyi\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Matyi\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
     "C:\\Users\\Matyi\\.nuget\\packages\\system.xml.xpath.xdocument\\4.3.0\\system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Matyi\\.nuget\\packages\\telerik.ui.for.aspnet.core.trial\\2022.3.913\\telerik.ui.for.aspnet.core.trial.2022.3.913.nupkg.sha512"
+    "C:\\Users\\Matyi\\.nuget\\packages\\telerik.ui.for.aspnet.core.trial\\2022.3.913\\telerik.ui.for.aspnet.core.trial.2022.3.913.nupkg.sha512",
+    "C:\\Users\\Matyi\\.nuget\\packages\\tinycsvparser\\2.7.0\\tinycsvparser.2.7.0.nupkg.sha512"
   ],
   "logs": []
 }

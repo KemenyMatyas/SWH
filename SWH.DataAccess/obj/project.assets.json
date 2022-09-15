@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "TinyCsvParser/2.7.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/TinyCsvParser.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/TinyCsvParser.dll": {}
+        }
+      },
+      "SWH.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/SWH.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SWH.Data.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TinyCsvParser/2.7.0": {
+      "sha512": "XkEfUXFcR+4wUXLCIPwJKt4bBqe5KClZQQvmlHaN3ExlD4omiRPgO6ySJ6NyOheYB/p9XvoJuc/h96+AhJ1KcQ==",
+      "type": "package",
+      "path": "tinycsvparser/2.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/TinyCsvParser.dll",
+        "lib/netstandard2.0/TinyCsvParser.dll",
+        "lib/netstandard2.1/TinyCsvParser.dll",
+        "tinycsvparser.2.7.0.nupkg.sha512",
+        "tinycsvparser.nuspec"
+      ]
+    },
+    "SWH.Data/1.0.0": {
+      "type": "project",
+      "path": "../SWH.Data/SWH.Data.csproj",
+      "msbuildProject": "../SWH.Data/SWH.Data.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "SWH.Data >= 1.0.0",
+      "TinyCsvParser >= 2.7.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Matyi\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Matyi\\Desktop\\SWH3\\SWH\\SWH.DataAccess\\SWH.DataAccess.csproj",
+      "projectName": "SWH.DataAccess",
+      "projectPath": "C:\\Users\\Matyi\\Desktop\\SWH3\\SWH\\SWH.DataAccess\\SWH.DataAccess.csproj",
+      "packagesPath": "C:\\Users\\Matyi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Matyi\\Desktop\\SWH3\\SWH\\SWH.DataAccess\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Matyi\\Desktop\\SWH3\\SWH\\NuGet.Config",
+        "C:\\Users\\Matyi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files (x86)\\Progress\\Telerik UI for ASP.NET Core R3 2022\\": {},
+        "C:\\Program Files (x86)\\Progress\\Telerik UI for ASP.NET Core R3 2022\\wrappers\\aspnetcore\\Binaries\\AspNet.Core": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.telerik.com/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "projectReferences": {
+            "C:\\Users\\Matyi\\Desktop\\SWH3\\SWH\\SWH.Data\\SWH.Data.csproj": {
+              "projectPath": "C:\\Users\\Matyi\\Desktop\\SWH3\\SWH\\SWH.Data\\SWH.Data.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
+        "dependencies": {
+          "TinyCsvParser": {
+            "target": "Package",
+            "version": "[2.7.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

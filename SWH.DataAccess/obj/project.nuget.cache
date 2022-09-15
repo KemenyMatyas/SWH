@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "9iD8fbJgIfIwjGrY3zzDQl1bxSJ3Z3ZIabF/C3z6/bmVvltwEQ1GCNlqTw2GSKPbkE7CpmknRIBaRVeskLyK3w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Matyi\\Desktop\\SWH3\\SWH\\SWH.DataAccess\\SWH.DataAccess.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Matyi\\.nuget\\packages\\tinycsvparser\\2.7.0\\tinycsvparser.2.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

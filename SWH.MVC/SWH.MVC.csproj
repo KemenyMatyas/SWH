@@ -20,6 +20,11 @@
     <None Remove="Templates\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SWH.DataAccess\SWH.DataAccess.csproj" />
+    <ProjectReference Include="..\SWH.Data\SWH.Data.csproj" />
+  </ItemGroup>
+
   <ProjectExtensions><VisualStudio><UserProperties UseCdnSupport="" /></VisualStudio></ProjectExtensions>
 
 </Project>
