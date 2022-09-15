@@ -1,6 +1,7 @@
 {
   "profiles": {
     "SWH.MVC": {
+      "hotReloadEnabled" : true,
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

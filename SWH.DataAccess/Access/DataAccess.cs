@@ -1,14 +1,13 @@
-﻿namespace SWH.DataAccess
+﻿namespace SWH.DataAccess.Access
 {
     using System;
-    using System.Linq;
     using System.Collections.Generic;
+    using System.Linq;
     using System.Text;
-    using CSVMapping;
-    using Data.Models;
-    using IAccess;
+    using SWH.Data.Models;
+    using SWH.DataAccess.CSVMapping;
+    using SWH.DataAccess.IAccess;
     using TinyCsvParser;
-    
 
     public class DataAccess : IDataAccess
     {
