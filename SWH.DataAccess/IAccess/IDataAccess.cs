@@ -8,5 +8,6 @@
     {
         public IEnumerable<Person> GetAllPersons();
         public Person GetPersonDetails(Guid id);
+        public void EditPersonData(Person person);
     }
 }

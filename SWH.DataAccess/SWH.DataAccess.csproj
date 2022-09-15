@@ -5,11 +5,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="TinyCsvParser" Version="2.7.0" />
+      <ProjectReference Include="..\SWH.Data\SWH.Data.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\SWH.Data\SWH.Data.csproj" />
+      <PackageReference Include="CsvHelper" Version="28.0.1" />
     </ItemGroup>
 
 </Project>

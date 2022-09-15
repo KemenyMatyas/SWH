@@ -3,36 +3,29 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="placeholders mb-2">
-    <div class="row d-flex justify-content-start">
-
-    </div>
-</div>
 <div class="container">
+    <button class="col-md-3 btn btn-primary">Export Data To XML</button>
     <div class="row">
         <div class="col-12">
-            @(Html.Kendo().Grid <Person>()
-                                .Name("gridPerson")
-                                .Columns(columns =>
-                                {
-                                    columns.Bound(p => p.UserName);
-                                    columns.Bound(p => p.FirstName);
-                                    columns.Bound(p => p.LastName);
-                                    columns.Bound(p => p.BirthDay).Format("");
-                                    columns.Bound(p => p.PlaceOfBirth);
-                                    columns.Bound(p => p.Domicile);
-                                })
-                                .Pageable()
-                                .Sortable()
-                                .Scrollable()
-                                .Filterable()
-                                .HtmlAttributes(new { style = "height:550px;" })
-                                .DataSource(dataSource => dataSource
-                                    .Ajax()
-                                    .PageSize(20)
-                                    .Read(read => read.Action("GetAllPersons", "GridPerson"))
-                                 )
-            )
+            @(Html.Kendo().Grid<Person>()
+                .Name("gridPerson")
+                .Columns(columns =>
+                {
+                    columns.Bound(p => p.Id).Hidden();
+                    columns.Bound(p => p.UserName);
+                    columns.Bound(p => p.FirstName);
+                    columns.Bound(p => p.LastName);
+                    columns.Bound(p => p.BirthDay).Format("{0:yyyy/MM/dd}");
+                    columns.Bound(p => p.PlaceOfBirth);
+                    columns.Bound(p => p.Domicile);
+                })
+                .HtmlAttributes(new {style = "height:550px;"})
+                .DataSource(dataSource => dataSource
+                    .Ajax()
+                    .PageSize(20)
+                    .Read(read => read.Action("GetAllPersons", "GridPerson"))
+                )
+                )
         </div>
     </div>
 </div>

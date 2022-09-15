@@ -1,4 +1,4 @@
 Guid,UserName,Password,FirstName,LastName,BirthDay,PlaceOfdBirth,Domicile
-a03fdb80-0141-421e-9d75-88401b73b02a,Admin,123,Mátyás,Kemény,2000.08.03,Budapest,Dunaharaszti
-efdf0c97-295f-4fef-a218-42d49b309ee4,user,jelszo,Annett,Lassú,2000.08.03,Budapest,Dunaharaszti
-c5332240-5dc6-4cfb-9eaf-1ef81ebe47b1,user,jelszo,Jennie,Nichols,1992-03-08,Budapest,Budapest
+a03fdb80-0141-421e-9d75-88401b73b02a,Admin,123,Mátyás,Kemény,2000. 08. 03,Budapest,Dunaharaszti Arany János utca 20
+efdf0c97-295f-4fef-a218-42d49b309ee4,teszt,test,test,test,2022. 09. 15,test,test
+c5332240-5dc6-4cfb-9eaf-1ef81ebe47b1,user,jelszo,Jennie,Nichols,1992. 03. 08,Budapest,Budapest Arany János utca 12
