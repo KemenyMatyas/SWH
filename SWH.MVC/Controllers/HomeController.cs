@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace SWH.MVC.Controllers
 {
+    using System.Xml;
+    using System.Xml.Linq;
     using Data.Models;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Linq;
     using Services.IServices;
     using Services.Services;
 
@@ -71,6 +75,15 @@ namespace SWH.MVC.Controllers
             return RedirectToAction("Index", "Login"); 
         }
         
+        [HttpPost]
+        public string StringToXml(string data)
+        {
+          
+            
+            var xml = JsonConvert.DeserializeXmlNode("{\"Row\":" + data + "}", "BiddingHistory");
+            var stringData = xml.OuterXml;
+            return stringData;
+        }
         
         public IActionResult Error()
         {

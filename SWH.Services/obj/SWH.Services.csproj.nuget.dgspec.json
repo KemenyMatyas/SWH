@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Matyi\\Desktop\\SWH3\\SWH\\SWH.Services\\SWH.Services.csproj": {}
+    "C:\\Users\\Matyi\\RiderProjects\\SWH\\SWH.Services\\SWH.Services.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Matyi\\Desktop\\SWH3\\SWH\\SWH.Data\\SWH.Data.csproj": {
+    "C:\\Users\\Matyi\\RiderProjects\\SWH\\SWH.Data\\SWH.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matyi\\Desktop\\SWH3\\SWH\\SWH.Data\\SWH.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Matyi\\RiderProjects\\SWH\\SWH.Data\\SWH.Data.csproj",
         "projectName": "SWH.Data",
-        "projectPath": "C:\\Users\\Matyi\\Desktop\\SWH3\\SWH\\SWH.Data\\SWH.Data.csproj",
+        "projectPath": "C:\\Users\\Matyi\\RiderProjects\\SWH\\SWH.Data\\SWH.Data.csproj",
         "packagesPath": "C:\\Users\\Matyi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matyi\\Desktop\\SWH3\\SWH\\SWH.Data\\obj\\",
+        "outputPath": "C:\\Users\\Matyi\\RiderProjects\\SWH\\SWH.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Matyi\\Desktop\\SWH3\\SWH\\NuGet.Config",
+          "C:\\Users\\Matyi\\RiderProjects\\SWH\\NuGet.Config",
           "C:\\Users\\Matyi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -49,7 +49,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -58,21 +59,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Matyi\\Desktop\\SWH3\\SWH\\SWH.Services\\SWH.Services.csproj": {
+    "C:\\Users\\Matyi\\RiderProjects\\SWH\\SWH.Services\\SWH.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matyi\\Desktop\\SWH3\\SWH\\SWH.Services\\SWH.Services.csproj",
+        "projectUniqueName": "C:\\Users\\Matyi\\RiderProjects\\SWH\\SWH.Services\\SWH.Services.csproj",
         "projectName": "SWH.Services",
-        "projectPath": "C:\\Users\\Matyi\\Desktop\\SWH3\\SWH\\SWH.Services\\SWH.Services.csproj",
+        "projectPath": "C:\\Users\\Matyi\\RiderProjects\\SWH\\SWH.Services\\SWH.Services.csproj",
         "packagesPath": "C:\\Users\\Matyi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matyi\\Desktop\\SWH3\\SWH\\SWH.Services\\obj\\",
+        "outputPath": "C:\\Users\\Matyi\\RiderProjects\\SWH\\SWH.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Matyi\\Desktop\\SWH3\\SWH\\NuGet.Config",
+          "C:\\Users\\Matyi\\RiderProjects\\SWH\\NuGet.Config",
           "C:\\Users\\Matyi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -90,8 +91,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Matyi\\Desktop\\SWH3\\SWH\\SWH.Data\\SWH.Data.csproj": {
-                "projectPath": "C:\\Users\\Matyi\\Desktop\\SWH3\\SWH\\SWH.Data\\SWH.Data.csproj"
+              "C:\\Users\\Matyi\\RiderProjects\\SWH\\SWH.Data\\SWH.Data.csproj": {
+                "projectPath": "C:\\Users\\Matyi\\RiderProjects\\SWH\\SWH.Data\\SWH.Data.csproj"
               }
             }
           }
@@ -117,7 +118,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -126,7 +128,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

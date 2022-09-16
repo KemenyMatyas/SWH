@@ -14,12 +14,9 @@ using System.Threading.Tasks;
 
 namespace SWH.MVC
 {
-    using Data.Models;
-    using FluentValidation;
     using FluentValidation.AspNetCore;
     using Services.IServices;
     using Services.Services;
-    using Validator;
 
     public class Startup
     {

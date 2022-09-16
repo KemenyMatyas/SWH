@@ -81,29 +81,33 @@
         $("#xmlImport").click(function() {
             let grid = $("#gridPerson");
             let data = grid.data("kendoGrid").dataSource.data()
-            console.log(data[2])
             
-            
-            var doc = $.parseXML("<xml/>")
-            
-            var xml = doc.getElementsByTagName("xml")[0]
-            var  key, elem
-            
-         
-            for (let i = 0; i < data.length; i++) {  
-                          var items = data[1]
-                
-                          for (key in items) {
-                                      if (items.hasOwnProperty(key)) {
-                                        elem = doc.createElement(key)
-                                        $(elem).text(items[key])
-                                        xml.appendChild(elem)
-                                }                                                                                       
-                          }
-            }                                              
-            console.log(xml.outerHTML)  
-            
+            $.ajax({
+                url: 'Home/StringToXml/',
+                method: 'POST',
+                data: {
+                    data: JSON.stringify(data).toString() ,
+                },
+                success: function(result) {                       
+                    download("data.xml", result);
+                }
+            });                                                                  
         })
+        
+        
+        
+        function download(filename, text) {
+            var element = document.createElement('a');
+            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+            element.setAttribute('download', filename);
+        
+            element.style.display = 'none';
+            document.body.appendChild(element);
+        
+            element.click();
+        
+            document.body.removeChild(element);
+        }
         
     </script>
 }
