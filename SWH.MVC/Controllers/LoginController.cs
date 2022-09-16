@@ -30,6 +30,7 @@
                 return RedirectToAction("Index", "Home"); 
             }
 
+            ViewBag.isLogin = false;
             return View("Index", loginUserDto);
         }
         

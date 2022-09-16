@@ -64,8 +64,12 @@ namespace SWH.MVC.Controllers
             
             
         }
-        
-        
+
+        public IActionResult Logout()
+        {
+            AuthService.IsLoggedIn = false;
+            return RedirectToAction("Index", "Login"); 
+        }
         
         
         public IActionResult Error()

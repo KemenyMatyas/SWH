@@ -116,4 +116,8 @@ p .k-button {
     .k-rpanel-expanded ul {
         flex-direction: column;
     }
+    
+    .validation-error{
+        background-color: red;
+    }
 }

@@ -4,7 +4,7 @@
 }
 
 <div class="container">
-    <button class="col-md-3 btn btn-primary">Export Data To XML</button>
+    <button id="xmlImport" class="col-md-3 btn btn-primary">Export Data To XML</button>
     <div class="row">
         <div class="col-12">
             @(Html.Kendo().Grid<Person>()
@@ -21,6 +21,11 @@
                     columns.Command(command => command.Custom("ViewDetails").Click("showDetails"));
                 })
                 .HtmlAttributes(new {style = "height:550px;"})
+                .Filterable()
+                .Pageable(pageable => pageable
+                    .Refresh(true)
+                    .PageSizes(true)
+                    .ButtonCount(3))
                 .DataSource(dataSource => dataSource
                     .Ajax()
                     .PageSize(20)
@@ -44,8 +49,6 @@
 
 @section scripts
 {
-
-
     <script type="text/javascript">  
     
         function CloseWindow() {         
@@ -74,5 +77,33 @@
                 }
             });
         }
+        
+        $("#xmlImport").click(function() {
+            let grid = $("#gridPerson");
+            let data = grid.data("kendoGrid").dataSource.data()
+            console.log(data[2])
+            
+            
+            var doc = $.parseXML("<xml/>")
+            
+            var xml = doc.getElementsByTagName("xml")[0]
+            var  key, elem
+            
+         
+            for (let i = 0; i < data.length; i++) {  
+                          var items = data[1]
+                
+                          for (key in items) {
+                                      if (items.hasOwnProperty(key)) {
+                                        elem = doc.createElement(key)
+                                        $(elem).text(items[key])
+                                        xml.appendChild(elem)
+                                }                                                                                       
+                          }
+            }                                              
+            console.log(xml.outerHTML)  
+            
+        })
+        
     </script>
 }

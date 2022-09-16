@@ -12,10 +12,20 @@
         <div class="m-2">
             <div class="form-group">
                 <label for="password">Password</label>
-                <input asp-for="Password" type="text" id="password" class="form-control form-control-lg" placeholder="Password"/>
+                <input asp-for="Password" type="password" id="password" class="form-control form-control-lg" placeholder="Password"/>
                 <span asp-validation-for="Password" class="validation-error"></span>
             </div>
         </div>
-        <button class="btn-primary btn" type="submit">Login</button>
+        <div class="m-2">
+                    @if (ViewBag.isLogin == false)
+                    {
+                        <span class="validation-error">Incorrect data</span>
+                    }
+        </div>
+
+        <div class="m-2"> 
+            <button class="btn-primary btn" type="submit">Login</button>
+        </div>
+        
     </form>
 </div>
