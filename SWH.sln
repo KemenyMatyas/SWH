@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWH.MVC", "SWH.MVC\SWH.MVC.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWH.Data", "SWH.Data\SWH.Data.csproj", "{CE8EB43B-4281-4B4F-9AFA-F1FCA1663695}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWH.DataAccess", "SWH.DataAccess\SWH.DataAccess.csproj", "{16E649C8-F202-4C67-98A8-C673E4186AFD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWH.Services", "SWH.Services\SWH.Services.csproj", "{16E649C8-F202-4C67-98A8-C673E4186AFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

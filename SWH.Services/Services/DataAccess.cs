@@ -1,12 +1,11 @@
-﻿namespace SWH.DataAccess.Access
+﻿namespace SWH.Services.Services
 {
     using System;
     using System.Collections.Generic;
     using System.IO;
     using System.Linq;
-    using Data.Models;
-    using IAccess;
-
+    using SWH.Data.Models;
+    using SWH.Services.IServices;
 
     public class DataAccess : IDataAccess
     {
@@ -52,8 +51,14 @@
             File.WriteAllLines("..\\database.csv", ParsePersonToString(persons));
         }
 
-
-
+        public Person LoginUserData(LoginUserDto userDto)
+        {
+            var person = File.ReadLines("..\\database.csv")
+                .Skip(1)
+                .Select(ParsePersonFromLine)
+                .FirstOrDefault(p => p.UserName == userDto.UserName || p.Password == userDto.Password);
+            return person;
+        }
 
 
         private static Person ParsePersonFromLine(string line)
@@ -88,5 +93,5 @@
             return strings;
         }
     
-}
+    }
 }

@@ -7,20 +7,27 @@ using System.Threading.Tasks;
 namespace SWH.MVC.Controllers
 {
     using Data.Models;
-    using DataAccess.IAccess;
+    using Services.IServices;
+    using Services.Services;
 
     public class HomeController : Controller
     {
         
         private readonly IDataAccess _dataAccess;
+        private readonly IUserService _userService;
 
-        public HomeController(IDataAccess dataAccess)
+        public HomeController(IDataAccess dataAccess, IUserService userService)
         {
             _dataAccess = dataAccess;
+            _userService = userService;
         }
         
         public IActionResult Index()
         {
+            if (!AuthService.IsLoggedIn)
+            {
+                return RedirectToAction("Index", "Login"); 
+            }
             return View();
         }
 

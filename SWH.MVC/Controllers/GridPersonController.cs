@@ -5,8 +5,8 @@ namespace SWH.MVC.Controllers
 {
     using System;
     using Data.Models;
-    using DataAccess.IAccess;
     using Kendo.Mvc.Extensions;
+    using Services.IServices;
 
     public class GridPersonController : Controller
     {

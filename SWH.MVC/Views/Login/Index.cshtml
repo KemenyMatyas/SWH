@@ -1,0 +1,21 @@
+﻿@model SWH.Data.Models.LoginUserDto
+
+<div>
+    <form asp-controller="Login" asp-action="Login" method="post">
+        <div class="m-2">
+                    <div class="form-group">
+                        <label for="user_name">UserName</label>
+                        <input asp-for="UserName" type="text" id="user_name" class="form-control form-control-lg "placeholder="User Name"/>
+                        <span asp-validation-for="UserName" class="validation-error"></span>
+                    </div>
+                </div>
+        <div class="m-2">
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input asp-for="Password" type="text" id="password" class="form-control form-control-lg" placeholder="Password"/>
+                <span asp-validation-for="Password" class="validation-error"></span>
+            </div>
+        </div>
+        <button class="btn-primary btn" type="submit">Login</button>
+    </form>
+</div>

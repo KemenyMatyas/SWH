@@ -15,10 +15,10 @@ using System.Threading.Tasks;
 namespace SWH.MVC
 {
     using Data.Models;
-    using DataAccess.Access;
-    using DataAccess.IAccess;
     using FluentValidation;
     using FluentValidation.AspNetCore;
+    using Services.IServices;
+    using Services.Services;
     using Validator;
 
     public class Startup
@@ -45,6 +45,7 @@ namespace SWH.MVC
             services.AddKendo();
             services.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<Startup>());
             services.AddScoped<IDataAccess, DataAccess>();
+            services.AddScoped<IUserService, UserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
