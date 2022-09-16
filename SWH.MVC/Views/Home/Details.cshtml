@@ -14,7 +14,7 @@
         <div class="m-2">
             <div class="form-group">
                 <label for="password">Password</label>
-                <input asp-for="Password" type="password" id="password" class="form-control form-control-lg" placeholder="Password"/>
+                <input asp-for="Password" type="text" id="password" class="form-control form-control-lg" placeholder="Password"/>
                 <span asp-validation-for="Password" class="validation-error"></span>
             </div>
         </div>
@@ -60,6 +60,8 @@
     
 <script>
     
+            $("#birth_day").kendoDatePicker();
+            
             $("#PersonForm").submit(function(event) {
                 event.preventDefault();          
                 let targetForm = $(event.currentTarget);

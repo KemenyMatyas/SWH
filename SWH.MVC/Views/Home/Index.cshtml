@@ -37,12 +37,21 @@
     .Modal(true)
     .Draggable(true)
     .Width(500)
+    .Events(e => e            
+        .Close("CloseWindow"))  
+    )
     )
 
 @section scripts
 {
 
-    <script type="text/javascript">     
+
+    <script type="text/javascript">  
+    
+        function CloseWindow() {         
+            location.reload();
+         }
+       
         function showDetails(e) {
             e.preventDefault();
         
