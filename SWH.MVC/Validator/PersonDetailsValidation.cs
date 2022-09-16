@@ -32,8 +32,7 @@
             
             RuleFor(p => p.Password)
                 .NotEmpty().NotNull()
-                .Matches(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{10,}$")
-                .MinimumLength(8); 
+                .MinimumLength(7); 
         }
     }
 }

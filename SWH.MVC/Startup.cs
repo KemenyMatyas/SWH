@@ -18,6 +18,7 @@ namespace SWH.MVC
     using DataAccess.Access;
     using DataAccess.IAccess;
     using FluentValidation;
+    using FluentValidation.AspNetCore;
     using Validator;
 
     public class Startup
@@ -42,8 +43,8 @@ namespace SWH.MVC
 
             // Add Kendo UI services to the services container
             services.AddKendo();
+            services.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<Startup>());
             services.AddScoped<IDataAccess, DataAccess>();
-            services.AddScoped<IValidator<Person>, PersonDetailsValidation>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -63,7 +64,6 @@ namespace SWH.MVC
             app.UseStaticFiles();
 
             app.UseRouting();
-
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

@@ -25,7 +25,7 @@ namespace SWH.MVC.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Details([FromQuery] string personId)
+        public IActionResult Details([FromQuery] string personId)
         {
 
             var person = _dataAccess.GetPersonDetails(Guid.Parse(personId));
@@ -33,14 +33,12 @@ namespace SWH.MVC.Controllers
         }
         
         [HttpPost]
-        public ActionResult Index(Person model)
+        public ActionResult SubmitDetails(Person model)
         {
             if (!ModelState.IsValid)
             {
                 return PartialView("Details",model);
             }
-
-            TempData["View"] = "Overview";
             return View("Success");
         }
         

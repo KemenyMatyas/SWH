@@ -47,7 +47,6 @@
             e.preventDefault();
         
             var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
-            console.log(Object.values(dataItem)[2])  
                          
                          
             $.ajax({
@@ -57,11 +56,12 @@
                     personId: Object.values(dataItem)[2],
         
                 },
-                success: function(result) {
-                    console.log(result)
+                success: function(result) {                       
                     var wnd = $("#Details").data("kendoWindow");
                     wnd.content(result);
                     wnd.center().open();
+                    
+
                 }
             });
         }

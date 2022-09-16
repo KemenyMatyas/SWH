@@ -1,7 +1,6 @@
 ﻿namespace SWH.Data.Models
 {
     using System;
-
     public class Person
     {
         public Guid Id { get; set; }

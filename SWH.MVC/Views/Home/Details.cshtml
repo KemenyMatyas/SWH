@@ -1,11 +1,10 @@
 ﻿@using SWH.Data.Models
 @model SWH.Data.Models.Person
 
-<div class="demo-section">
-    <div id="validation-success"></div>
+
+<div class="form-div">
     @(Html.Kendo().Form<Person>()
-        .Name("formExample")
-        .HtmlAttributes(new { action = "Index", method = "POST" })
+        .Name("PersonForm")
         .Validatable(v =>
         {
             v.ValidateOnBlur(true);
@@ -16,7 +15,7 @@
             items.AddGroup()
                 .Items(i =>
                 {
-                   i.Add()
+                    i.Add()
                         .Field(f => f.FirstName)
                         .Label(l => l.Text("First Name:"));
                     i.Add()
@@ -41,4 +40,14 @@
                 });
         })
         )
+
+
 </div>
+<script>
+$(document).ready(function() {
+    $("#PersonForm").submit(function (){
+        
+      console.log(@Model.FirstName)  
+    })    
+})      
+</script>
