@@ -1,0 +1,44 @@
+﻿@using SWH.Data.Models
+@model SWH.Data.Models.Person
+
+<div class="demo-section">
+    <div id="validation-success"></div>
+    @(Html.Kendo().Form<Person>()
+        .Name("formExample")
+        .HtmlAttributes(new { action = "Index", method = "POST" })
+        .Validatable(v =>
+        {
+            v.ValidateOnBlur(true);
+            v.ValidationSummary(vs => vs.Enable(false));
+        })
+        .Items(items =>
+        {
+            items.AddGroup()
+                .Items(i =>
+                {
+                   i.Add()
+                        .Field(f => f.FirstName)
+                        .Label(l => l.Text("First Name:"));
+                    i.Add()
+                        .Field(f => f.LastName)
+                        .Label(l => l.Text("Last Name:"));
+                    i.Add()
+                        .Field(f => f.UserName)
+                        .Label(l => l.Text("Username:"));
+                    i.Add()
+                        .Field(f => f.Password)
+                        .Label(l => l.Text("Password:"));
+                    i.Add()
+                        .Field(f => f.PlaceOfBirth)
+                        .Label(l => l.Text("PlaceOfBirth"));
+                    i.Add()
+                        .Field(f => f.BirthDay)
+                        .Label(l => l.Text("Date of Birth:"));
+
+                    i.Add()
+                        .Field(f => f.Domicile)
+                        .Label(l => l.Text("Domicile"));
+                });
+        })
+        )
+</div>

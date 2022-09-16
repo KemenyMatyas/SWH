@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.2.2" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.2.2" />
+    <PackageReference Include="jQuery" Version="3.6.0" />
     <PackageReference Include="Telerik.UI.for.AspNet.Core.Trial" Version="2022.3.913" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.0" />
   </ItemGroup>
@@ -23,6 +27,23 @@
   <ItemGroup>
     <ProjectReference Include="..\SWH.DataAccess\SWH.DataAccess.csproj" />
     <ProjectReference Include="..\SWH.Data\SWH.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Shared\EditorTemplates\Boolean.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Shared\EditorTemplates\Country.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Shared\EditorTemplates\Currency.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Shared\EditorTemplates\Date.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Shared\EditorTemplates\DateTime.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Shared\EditorTemplates\Email.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Shared\EditorTemplates\EmailAddress.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Shared\EditorTemplates\GridForeignKey.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Shared\EditorTemplates\Integer.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Shared\EditorTemplates\Number.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Shared\EditorTemplates\Password.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Shared\EditorTemplates\String.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Shared\EditorTemplates\Time.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Shared\EditorTemplates\Url.cshtml" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties UseCdnSupport="" /></VisualStudio></ProjectExtensions>

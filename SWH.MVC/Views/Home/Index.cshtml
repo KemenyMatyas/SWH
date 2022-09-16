@@ -32,64 +32,38 @@
 </div>
 
 @(Html.Kendo().Window().Name("Details")
-    .Title("Customer Details")
+    .Title("Person Details Form")
     .Visible(false)
     .Modal(true)
     .Draggable(true)
-    .Width(300)
+    .Width(500)
     )
 
 @section scripts
 {
-    <script type="text/x-kendo-template" id="template">
-        <div id="details-container">
-            <h2>#= UserName #</h2>
-            <h2>#= FirstName # #= LastName #</h2>
-            <h2>#= PlaceOfBirth #</h2>
-            <h2>#= BirthDay #</h2>
-            <h2>#= Domicile #</h2>
-        </div>
-    </script>
-    
-    <script type="text/javascript">
-        var detailsTemplate;
-    
-        $(document).ready( function () {
-            detailsTemplate = kendo.template($("#template").html());
-        });
-    
+
+    <script type="text/javascript">     
         function showDetails(e) {
             e.preventDefault();
-    
+        
             var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
-            var wnd = $("#Details").data("kendoWindow");
-    
-            wnd.content(detailsTemplate(dataItem));
-            wnd.center().open();
+            console.log(Object.values(dataItem)[2])  
+                         
+                         
+            $.ajax({
+                url: 'Home/Details/',
+                type: 'GET',
+                data: {
+                    personId: Object.values(dataItem)[2],
+        
+                },
+                success: function(result) {
+                    console.log(result)
+                    var wnd = $("#Details").data("kendoWindow");
+                    wnd.content(result);
+                    wnd.center().open();
+                }
+            });
         }
     </script>
-    
-    <style type="text/css">
-        #details-container
-        {
-            padding: 10px;
-        }
-    
-        #details-container h2
-        {
-            margin: 0;
-        }
-    
-        #details-container em
-        {
-            color: #8c8c8c;
-        }
-    
-        #details-container dt
-        {
-            margin:0;
-            display: inline;
-        }
-    </style>
 }
-
