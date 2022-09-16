@@ -33,13 +33,29 @@ namespace SWH.MVC.Controllers
         }
         
         [HttpPost]
-        public ActionResult SubmitDetails(Person model)
+        public ActionResult SubmitDetails(Person person)
         {
             if (!ModelState.IsValid)
             {
-                return PartialView("Details",model);
+                return PartialView("Details",person);
             }
-            return View("Success");
+
+            try
+            {
+                _dataAccess.EditPersonData(person);
+                return PartialView("Success");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+            
+            
+            
+            
+            
+            
         }
         
         

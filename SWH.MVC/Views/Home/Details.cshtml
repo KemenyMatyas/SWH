@@ -1,53 +1,83 @@
-﻿@using SWH.Data.Models
-@model SWH.Data.Models.Person
+﻿@model SWH.Data.Models.Person
 
 
-<div class="form-div">
-    @(Html.Kendo().Form<Person>()
-        .Name("PersonForm")
-        .Validatable(v =>
-        {
-            v.ValidateOnBlur(true);
-            v.ValidationSummary(vs => vs.Enable(false));
-        })
-        .Items(items =>
-        {
-            items.AddGroup()
-                .Items(i =>
-                {
-                    i.Add()
-                        .Field(f => f.FirstName)
-                        .Label(l => l.Text("First Name:"));
-                    i.Add()
-                        .Field(f => f.LastName)
-                        .Label(l => l.Text("Last Name:"));
-                    i.Add()
-                        .Field(f => f.UserName)
-                        .Label(l => l.Text("Username:"));
-                    i.Add()
-                        .Field(f => f.Password)
-                        .Label(l => l.Text("Password:"));
-                    i.Add()
-                        .Field(f => f.PlaceOfBirth)
-                        .Label(l => l.Text("PlaceOfBirth"));
-                    i.Add()
-                        .Field(f => f.BirthDay)
-                        .Label(l => l.Text("Date of Birth:"));
-
-                    i.Add()
-                        .Field(f => f.Domicile)
-                        .Label(l => l.Text("Domicile"));
-                });
-        })
-        )
-
-
-</div>
+<div id="form-div">
+    <form asp-controller="Home" asp-action="SubmitDetails" method="post" id="PersonForm">
+        <input asp-for="Id" hidden=""/>
+        <div class="m-2">
+            <div class="form-group">
+                <label for="user_name">UserName</label>
+                <input asp-for="UserName" type="text" id="user_name" class="form-control form-control-lg "placeholder="User Name"/>
+                <span asp-validation-for="UserName" class="validation-error"></span>
+            </div>
+        </div>
+        <div class="m-2">
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input asp-for="Password" type="password" id="password" class="form-control form-control-lg" placeholder="Password"/>
+                <span asp-validation-for="Password" class="validation-error"></span>
+            </div>
+        </div>
+        <div class="m-2">
+            <div class="form-group">
+                <label for="first_name">First Name</label>
+                <input asp-for="FirstName" type="text" id="first_name" class="form-control form-control-lg" placeholder="First Name"/>
+                <span asp-validation-for="FirstName" class="validation-error"></span>
+            </div>
+        </div>
+        <div class="m-2">
+            <div class="form-group">
+                <label for="last_name">Last Name</label>
+                <input asp-for="LastName" type="text" id="last_name" class="form-control form-control-lg" placeholder="Last Name"/>
+                <span asp-validation-for="LastName" class="validation-error"></span>
+            </div>
+        </div>
+        <div class="m-2">
+            <div class="form-group">
+                <label for="birth_day">Birth Day</label>
+                <input asp-for="BirthDay" type="text" id="birth_day" class="form-control form-control-lg" placeholder="Birth Day"/>
+                <span asp-validation-for="BirthDay" class="validation-error"></span>
+            </div>
+        </div>
+        <div class="m-2">
+            <div class="form-group">
+                <label for="place_of_birth">Place Of Birth</label>
+                <input asp-for="PlaceOfBirth" type="text" id="place_of_birth" class="form-control form-control-lg" placeholder="Place Of Birth"/>
+                <span asp-validation-for="PlaceOfBirth" class="validation-error"></span>
+            </div>
+        </div>
+        <div class="m-2">
+            <div class="form-group">
+                <label for="domicile">Domicile</label>
+                <input asp-for="Domicile" type="text" id="domicile" class="form-control form-control-lg" placeholder="Domicile"/>
+                <span asp-validation-for="Domicile" class="validation-error"></span>
+            </div>
+        </div>
+        <div class="m-2">
+            <button id="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+    
 <script>
-$(document).ready(function() {
-    $("#PersonForm").submit(function (){
+    
+            $("#PersonForm").submit(function(event) {
+                event.preventDefault();          
+                let targetForm = $(event.currentTarget);
         
-      console.log(@Model.FirstName)  
-    })    
-})      
-</script>
+                $.ajax({
+                    url: targetForm.attr("action"),
+                    method: targetForm.attr("method"),
+                    data: new FormData(this),
+                    processData: false,
+                    contentType: false,
+                    success: function(response) {     
+                        console.log(response)
+                            $("#form-div").html(response)               
+                    },
+                    error: function(response) {
+                    }
+                });
+            });
+    </script>
+</div>
+
