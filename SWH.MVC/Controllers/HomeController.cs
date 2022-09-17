@@ -38,7 +38,10 @@ namespace SWH.MVC.Controllers
         [HttpGet]
         public IActionResult Details([FromQuery] string personId)
         {
-
+            if (!AuthService.IsLoggedIn)
+            {
+                return RedirectToAction("Index", "Login"); 
+            }
             var person = _dataAccess.GetPersonDetails(Guid.Parse(personId));
             return PartialView(person);
         }
@@ -46,6 +49,10 @@ namespace SWH.MVC.Controllers
         [HttpPost]
         public ActionResult SubmitDetails(Person person)
         {
+            if (!AuthService.IsLoggedIn)
+            {
+                return RedirectToAction("Index", "Login"); 
+            }
             if (!ModelState.IsValid)
             {
                 return PartialView("Details",person);
@@ -72,11 +79,17 @@ namespace SWH.MVC.Controllers
         [HttpPost]
         public string StringToXml(string data)
         {
-          
-            
-            var xml = JsonConvert.DeserializeXmlNode("{\"Person\":" + data + "}", "Persons");
-            var stringData = xml.OuterXml;
-            return stringData;
+            try
+            {
+                var xml = JsonConvert.DeserializeXmlNode("{\"Person\":" + data + "}", "Persons");
+                var stringData = xml.OuterXml;
+                return stringData;
+            }
+            catch (Exception e)
+            {
+                return "<Error>Wrong data</Error>";
+            }
+
         }
         
         public IActionResult Error()
