@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using SWH.Services.Services
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -42,7 +43,11 @@
             {
             })
             )
-        <button id="logout" class="btn-danger btn">Logout</button>
+        @if (AuthService.IsLoggedIn)
+        {
+            <button id="logout" class="btn-danger btn">Logout</button>
+        }
+       
     </kendo-responsivepanel>
 </div>
 
