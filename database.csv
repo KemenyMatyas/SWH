@@ -1,4 +1,7 @@
 Guid,UserName,Password,FirstName,LastName,BirthDay,PlaceOfdBirth,Domicile
-a03fdb80-0141-421e-9d75-88401b73b02a,Admin,asdad1231d,Mátyás,Kemény,2022. 09. 04,Budapest,Dunaharaszti Arany János utca 20
-efdf0c97-295f-4fef-a218-42d49b309ee4,teszt,test,test,test,2022. 09. 16,test,test
-c5332240-5dc6-4cfb-9eaf-1ef81ebe47b1,user,jelszodas12,Jennie,Nichols,1992. 03. 08,Budapest,Budapest Arany János utca 12
+a03fdb80-0141-421e-9d75-88401b73b02a,Admin,1234,Mátyás,Kemény,2022. 09. 04,Budapest,Dunaharaszti
+c5332240-5dc6-4cfb-9eaf-1ef81ebe47b1,user,jelszo,Jennie,Nichols,1992. 03. 08,Budapest,Budapest
+88a7622a-6b28-4cba-bd10-d55596bfeb59,JArany,admin,János, Arany, 1950. 10. 22,Nagyszalonta, Lipótváros
+b5b9efe5-7694-4759-b9ed-2028250aa436,PSandor,vers, Sándor, Petőfi, 1960. 07. 31, Kiskőrös, Erdélyi Fejedelemség
+10603b1c-47d3-4e9b-b815-b7df0f791a4f,PFerenc, labda, Ferenc, Puskás, 1927. 11. 17, Budapest, Budapest
+e7058c88-631f-4bf9-8c5c-6d7800f7083a,2Erzsébet, korona, Királynő, Erzsébet, 1926. 04. 21, London, Balmorali kastály

@@ -32,7 +32,7 @@
             
             RuleFor(p => p.Password)
                 .NotEmpty().NotNull()
-                .MinimumLength(7); 
+                .MinimumLength(4); 
         }
     }
 }
