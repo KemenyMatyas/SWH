@@ -61,12 +61,6 @@ namespace SWH.MVC.Controllers
                 Console.WriteLine(e);
                 throw;
             }
-            
-            
-            
-            
-            
-            
         }
 
         public IActionResult Logout()
@@ -80,7 +74,7 @@ namespace SWH.MVC.Controllers
         {
           
             
-            var xml = JsonConvert.DeserializeXmlNode("{\"Row\":" + data + "}", "BiddingHistory");
+            var xml = JsonConvert.DeserializeXmlNode("{\"Person\":" + data + "}", "Persons");
             var stringData = xml.OuterXml;
             return stringData;
         }

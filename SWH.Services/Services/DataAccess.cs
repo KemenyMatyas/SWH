@@ -56,7 +56,7 @@
             var person = File.ReadLines("..\\database.csv")
                 .Skip(1)
                 .Select(ParsePersonFromLine)
-                .FirstOrDefault(p => p.UserName == userDto.UserName || p.Password == userDto.Password);
+                .FirstOrDefault(p => p.UserName == userDto.UserName && p.Password == userDto.Password);
             return person;
         }
 

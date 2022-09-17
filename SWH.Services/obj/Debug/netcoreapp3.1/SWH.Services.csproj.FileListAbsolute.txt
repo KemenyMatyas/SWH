@@ -11,16 +11,3 @@ C:\Users\Matyi\Desktop\SWH3\SWH\SWH.Services\obj\Debug\netcoreapp3.1\SWH.Service
 C:\Users\Matyi\Desktop\SWH3\SWH\SWH.Services\obj\Debug\netcoreapp3.1\SWH.Services.csproj.CopyComplete
 C:\Users\Matyi\Desktop\SWH3\SWH\SWH.Services\obj\Debug\netcoreapp3.1\SWH.Services.dll
 C:\Users\Matyi\Desktop\SWH3\SWH\SWH.Services\obj\Debug\netcoreapp3.1\SWH.Services.pdb
-C:\Users\Matyi\RiderProjects\SWH\SWH.Services\bin\Debug\netcoreapp3.1\SWH.Services.deps.json
-C:\Users\Matyi\RiderProjects\SWH\SWH.Services\bin\Debug\netcoreapp3.1\SWH.Services.dll
-C:\Users\Matyi\RiderProjects\SWH\SWH.Services\bin\Debug\netcoreapp3.1\SWH.Services.pdb
-C:\Users\Matyi\RiderProjects\SWH\SWH.Services\bin\Debug\netcoreapp3.1\SWH.Data.dll
-C:\Users\Matyi\RiderProjects\SWH\SWH.Services\bin\Debug\netcoreapp3.1\SWH.Data.pdb
-C:\Users\Matyi\RiderProjects\SWH\SWH.Services\obj\Debug\netcoreapp3.1\SWH.Services.csproj.AssemblyReference.cache
-C:\Users\Matyi\RiderProjects\SWH\SWH.Services\obj\Debug\netcoreapp3.1\SWH.Services.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Matyi\RiderProjects\SWH\SWH.Services\obj\Debug\netcoreapp3.1\SWH.Services.AssemblyInfoInputs.cache
-C:\Users\Matyi\RiderProjects\SWH\SWH.Services\obj\Debug\netcoreapp3.1\SWH.Services.AssemblyInfo.cs
-C:\Users\Matyi\RiderProjects\SWH\SWH.Services\obj\Debug\netcoreapp3.1\SWH.Services.csproj.CoreCompileInputs.cache
-C:\Users\Matyi\RiderProjects\SWH\SWH.Services\obj\Debug\netcoreapp3.1\SWH.Services.csproj.CopyComplete
-C:\Users\Matyi\RiderProjects\SWH\SWH.Services\obj\Debug\netcoreapp3.1\SWH.Services.dll
-C:\Users\Matyi\RiderProjects\SWH\SWH.Services\obj\Debug\netcoreapp3.1\SWH.Services.pdb
