@@ -60,7 +60,9 @@
     
 <script>
     
-            $("#birth_day").kendoDatePicker();
+            $("#birth_day").kendoDatePicker({
+                format: "yyyy/MM/dd"
+            })
             
             $("#PersonForm").submit(function(event) {
                 event.preventDefault();          
